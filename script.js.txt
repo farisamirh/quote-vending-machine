@@ -1,0 +1,24 @@
+// Array of quotes
+const quotes = [
+  "The supreme quality for leadership is unquestionably integrity. Without it, no real success is possible. – Dwight D Eisenhower",
+  "Real integrity is doing the right thing, knowing that nobody’s going to know whether you did it or not. – Oprah Winfrey",
+  "The foundation stones for a balanced success are honesty, character, integrity, faith, love, and loyalty. – Zig Ziglar",
+  "Honor your commitments with integrity. – Les Brown",
+  "Have the courage to say no. Have the courage to face the truth. Do the right thing because it is right. These are the magic keys to living your life with integrity. – W. Clement Stone",
+  "Integrity has no need of rules. – Albert Camus",
+  "One of the truest tests of integrity is its blunt refusal to be compromised. – Chinua Achebe",
+  "Subtlety may deceive you; integrity never will. – Oliver Cromwell"
+];
+
+// Function to generate a random quote
+function getRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  const quote = quotes[randomIndex];
+  document.getElementById('quote').textContent = quote;
+}
+
+// Event listener for the button to change the quote
+document.getElementById('new-quote-btn').addEventListener('click', getRandomQuote);
+
+// Display a random quote when the page loads
+getRandomQuote();
